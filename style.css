@@ -1,189 +1,127 @@
 /* ===== Basic Reset ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+body{
+  background:#f5f7fa;
+  color:#333;
 }
 
-/* ===== Navbar ===== */
-.navbar {
-    background-color: #333;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('images/dandeliheroimage.jpeg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.hero h1{
+  font-size:3rem;
 }
 
-.navbar ul li {
-    margin: 10px 20px;
+.hero p{
+  font-size:1.2rem;
+  margin-top:10px;
 }
 
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 30px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
 }
 
-.navbar ul li a:hover {
-    color: #ffcc00;
+/* SECTIONS */
+section{
+  padding:60px 10%;
 }
 
-/* ===== Hero Section ===== */
-.hero {
-    text-align: center;
-    padding: 30px 15px;
-    background-color: #e0f7fa;
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.2rem;
 }
 
-.hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
 }
 
-.hero h1 {
-    margin: 20px 0 10px;
-    font-size: 2.5rem;
-    color: #00796b;
+/* CARDS */
+.card{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.hero p {
-    font-size: 1.1rem;
-    color: #555;
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
 }
 
-/* ===== Packages Section ===== */
-.packages {
-    text-align: center;
-    padding: 50px 15px;
-    background-color: #ffffff;
+.content{
+  padding:20px;
 }
 
-.packages h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #00796b;
+.card ul{
+  list-style:none;
+  line-height:1.8;
 }
 
-/* Package Cards */
-.package-card {
-    display: inline-block;
-    width: 300px;
-    margin: 20px;
-    padding: 15px;
-    background-color: #f1f1f1;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-    vertical-align: top;
-    text-align: center;
+/* GALLERY */
+.gallery img{
+  width:100%;
+  border-radius:15px;
 }
 
-.package-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+/* CONTACT */
+.contact{
+  background:#111;
+  color:#fff;
+  text-align:center;
 }
 
-.package-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.contact a{
+  color:#25D366;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.package-card h3 {
-    margin: 15px 0 10px;
-    color: #00796b;
+/* FOOTER */
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:15px;
 }
 
-.package-card p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.package-card button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #00796b;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.package-card button:hover {
-    background-color: #004d40;
-}
-
-/* ===== Contact Section ===== */
-.contact {
-    text-align: center;
-    padding: 50px 15px;
-    background-color: #e0f7fa;
-}
-
-.contact button {
-    padding: 12px 25px;
-    background-color: #25D366; /* WhatsApp green */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
-}
-
-.contact button:hover {
-    background-color: #128C7E;
-}
-
-/* ===== Footer (Optional) ===== */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-/* ===== Responsive ===== */
-@media screen and (max-width: 900px) {
-    .package-card {
-        width: 45%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .package-card {
-        width: 90%;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
